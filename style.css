@@ -242,9 +242,12 @@ body {
 /* ── Hosts grid ── */
 .hosts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   margin-top: 1.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .host-card {
   border: 1px solid #ddd;
