@@ -249,10 +249,37 @@ body {
 .host-card {
   border: 1px solid #ddd;
   padding: 1.25rem;
+  position: relative;
 }
-.host-card h3 { font-size: 1rem; margin-bottom: 0.2rem; }
-.host-card .role { font-size: 0.82rem; color: #555; margin-bottom: 0.4rem; }
-.host-card a { font-size: 0.82rem; color: #111; }
+.host-card::after {
+  content: '';
+  position: absolute;
+  top: 4px; left: 4px; right: -4px; bottom: -4px;
+  border: 1px solid #ddd;
+  z-index: -1;
+}
+.host-photo {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  margin-bottom: 1rem;
+}
+.host-card h3 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #7b5aa6;
+  margin-bottom: 0.2rem;
+}
+.host-card .role { font-size: 0.72rem; color: #6d6d6d; letter-spacing: 0.05em; margin-bottom: 0.1rem; }
+.host-card .dept { font-size: 0.72rem; color: #6d6d6d; letter-spacing: 0.05em; margin-bottom: 0.75rem; line-height: 1.5; }
+.host-card .bio { font-size: 0.75rem; color: #444; line-height: 1.65; margin-bottom: 1rem; }
+.host-links { display: flex; flex-direction: column; gap: 4px; }
+.host-links a { font-size: 0.72rem; color: #7b5aa6; text-decoration: none; letter-spacing: 0.03em; }
+.host-links a:hover { text-decoration: underline; }
 
 /* ── Readings table ── */
 table {
