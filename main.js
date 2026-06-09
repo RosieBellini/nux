@@ -1,14 +1,16 @@
-document.querySelectorAll('.card-header').forEach(header => {
-  const body = document.getElementById(header.getAttribute('aria-controls'));
+// Drawer
+const overlay = document.getElementById('drawer-overlay');
+document.getElementById('menu-open').addEventListener('click', () => overlay.classList.add('open'));
+document.getElementById('menu-close').addEventListener('click', () => overlay.classList.remove('open'));
+overlay.addEventListener('click', e => { if (e.target === overlay) overlay.classList.remove('open'); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') overlay.classList.remove('open'); });
 
-  function toggle() {
-    const expanded = header.getAttribute('aria-expanded') === 'true';
-    header.setAttribute('aria-expanded', String(!expanded));
-    body.hidden = expanded;
-  }
-
-  header.addEventListener('click', toggle);
-  header.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+// Accordion
+document.querySelectorAll('.accordion-header').forEach(btn => {
+  const panel = document.getElementById(btn.getAttribute('aria-controls'));
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    panel.hidden = expanded;
   });
 });

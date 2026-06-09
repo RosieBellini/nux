@@ -7,51 +7,81 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <span class="site-title">NUX Seminar</span>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="hosts.html">Hosts</a></li>
-      <li><a href="readings.html">Readings</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="https://nyu-community.slack.com/archives/C08QXYZ1234" target="_blank">HCI Slack ↗</a></li>
-    </ul>
-  </nav>
 
-  <main>
-    <section class="hero">
-      <h1>NUX Seminar</h1>
-      <p class="tagline">A weekly seminar on new user experience research at NYU.</p>
-    </section>
+  <!-- Top bar -->
+  <header class="topbar">
+    <a href="index.html">
+      <!-- Replace src with your actual logo image -->
+      <svg class="logo" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="NUX home">
+        <circle cx="22" cy="22" r="21" stroke="#111" stroke-width="1.5"/>
+        <text x="22" y="27" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="16" fill="#111">n</text>
+      </svg>
+    </a>
+    <button class="hamburger" id="menu-open" aria-label="Open menu">&#9776;</button>
+  </header>
 
-    <section class="about-section">
-      <div class="card">
-        <div class="card-header" id="about-toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="about-body">
-          <h2>About Us</h2>
-          <span class="toggle-icon" aria-hidden="true">+</span>
-        </div>
-        <div class="card-body" id="about-body" hidden>
-          <p>NUX is an interdisciplinary seminar at NYU bringing together researchers, students, and practitioners to discuss emerging work in human-computer interaction, user experience, and technology design.</p>
-          <p>We meet weekly during the semester to read and discuss recent papers, hear from guest speakers, and collaborate on research questions at the intersection of people and technology.</p>
+  <!-- Side drawer -->
+  <div class="drawer-overlay" id="drawer-overlay" role="dialog" aria-modal="true" aria-label="Navigation">
+    <div class="drawer">
+      <button class="drawer-close" id="menu-close" aria-label="Close menu">&#10005;</button>
+      <nav>
+        <a href="hosts.html">Hosts</a>
+        <a href="readings.html">Readings</a>
+        <a href="resources.html">Resources</a>
+        <a href="https://nyu-community.slack.com/archives/C08QXYZ1234" target="_blank">HCI Slack ↗</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1 class="hero-title">nux</h1>
+    <div class="hero-buttons">
+      <a href="https://forms.gle/PLACEHOLDER" target="_blank" class="btn"><span class="arrow-icon">↗</span> Mailing List</a>
+      <a href="hosts.html" class="btn"><span class="arrow-icon">↗</span> Hosts</a>
+      <a href="resources.html" class="btn"><span class="arrow-icon">↗</span> Resources</a>
+      <a href="readings.html" class="btn filled"><span class="arrow-icon">↗</span> See Readings</a>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">↓</div>
+  </section>
+
+  <!-- About -->
+  <section class="section">
+    <h2 class="section-title">About Us</h2>
+    <p style="text-align:center; font-size:0.95rem; line-height:1.8; max-width:580px; margin:0 auto 2rem;">
+      NUX is an interdisciplinary seminar at NYU bringing together researchers, students, and practitioners to discuss emerging work in human-computer interaction, user experience, and technology design. We meet weekly during the semester to read and discuss recent papers, hear from guest speakers, and collaborate on research questions at the intersection of people and technology.
+    </p>
+
+    <div class="accordion" id="accordion">
+
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false" aria-controls="panel-about" id="btn-about">
+          More about us
+          <span class="accordion-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion-body" id="panel-about" role="region" aria-labelledby="btn-about" hidden>
+          <p>Founded at NYU, NUX (New User Experience) brings together people from computer science, psychology, law, design, and social science to look at HCI problems from multiple angles.</p>
+          <p>Our sessions combine close reading of current papers with open discussion. No background in any particular field is required — curiosity is enough.</p>
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-header" id="involve-toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="involve-body">
-          <h2>Get Involved</h2>
-          <span class="toggle-icon" aria-hidden="true">+</span>
-        </div>
-        <div class="card-body" id="involve-body" hidden>
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false" aria-controls="panel-involve" id="btn-involve">
+          Get involved
+          <span class="accordion-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion-body" id="panel-involve" role="region" aria-labelledby="btn-involve" hidden>
           <ul>
-            <li><strong>Attend a session</strong> — Sessions are open to all NYU affiliates. Check the <a href="readings.html">Readings</a> page for upcoming topics.</li>
-            <li><strong>Join the Slack</strong> — Connect with the community on the <a href="https://nyu-community.slack.com/archives/C08QXYZ1234" target="_blank">NYU HCI Slack ↗</a>.</li>
+            <li><strong>Attend a session</strong> — Open to all NYU affiliates. Check the <a href="readings.html">Readings</a> page for upcoming topics and times.</li>
+            <li><strong>Join the Slack</strong> — Connect on the <a href="https://nyu-community.slack.com/archives/C08QXYZ1234" target="_blank">NYU HCI Slack ↗</a>.</li>
             <li><strong>Present your work</strong> — Reach out to the <a href="hosts.html">hosts</a> if you'd like to share ongoing research.</li>
             <li><strong>Suggest a reading</strong> — We welcome paper suggestions from the community.</li>
           </ul>
         </div>
       </div>
-    </section>
-  </main>
+
+    </div>
+  </section>
 
   <footer>
     <p>NYU NUX Seminar &middot; <a href="hosts.html">Contact the hosts</a></p>

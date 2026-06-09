@@ -7,19 +7,31 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <span class="site-title">NUX Seminar</span>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="hosts.html">Hosts</a></li>
-      <li><a href="readings.html">Readings</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="https://nyu-community.slack.com/archives/C08QXYZ1234" target="_blank">HCI Slack ↗</a></li>
-    </ul>
-  </nav>
 
-  <main>
-    <h1 class="page-title">Hosts</h1>
+  <header class="topbar">
+    <a href="index.html">
+      <svg class="logo" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="NUX home">
+        <circle cx="22" cy="22" r="21" stroke="#111" stroke-width="1.5"/>
+        <text x="22" y="27" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="16" fill="#111">n</text>
+      </svg>
+    </a>
+    <button class="hamburger" id="menu-open" aria-label="Open menu">&#9776;</button>
+  </header>
+
+  <div class="drawer-overlay" id="drawer-overlay" role="dialog" aria-modal="true" aria-label="Navigation">
+    <div class="drawer">
+      <button class="drawer-close" id="menu-close" aria-label="Close menu">&#10005;</button>
+      <nav>
+        <a href="hosts.html">Hosts</a>
+        <a href="readings.html">Readings</a>
+        <a href="resources.html">Resources</a>
+        <a href="https://nyu-community.slack.com/archives/C08QXYZ1234" target="_blank">HCI Slack ↗</a>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top: 7rem;">
+    <h1 class="section-title">Hosts</h1>
 
     <div class="hosts-grid">
       <div class="host-card">
@@ -34,10 +46,12 @@
       </div>
       <!-- Add more hosts here -->
     </div>
-  </main>
+  </section>
 
   <footer>
     <p>NYU NUX Seminar &middot; <a href="hosts.html">Contact the hosts</a></p>
   </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
