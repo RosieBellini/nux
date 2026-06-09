@@ -91,13 +91,9 @@ body {
   position: relative;
 }
 
-.hero-title {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-style: italic;
-  font-size: clamp(5rem, 18vw, 12rem);
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: -0.02em;
+.hero-logo {
+  width: clamp(280px, 70vw, 680px);
+  height: auto;
   margin-bottom: 2.5rem;
 }
 
