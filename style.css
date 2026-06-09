@@ -109,16 +109,16 @@ body {
   align-items: center;
   padding: 0.5rem 1.3rem;
   border-radius: 3px;
-  border: 1.5px solid #111;
+  border: 1.5px solid #7b5aa6;
   font-family: 'DM Serif Display', Georgia, serif;
   font-style: italic;
   font-size: 0.95rem;
   text-decoration: none;
-  color: #111;
+  color: #7b5aa6;
   background: transparent;
   cursor: pointer;
   position: relative;
-  transition: background 0.15s, color 0.15s;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 .btn::after {
   content: '';
@@ -127,16 +127,16 @@ body {
   left: 4px;
   right: -4px;
   bottom: -4px;
-  border: 1px solid #111;
+  border: 1px solid #7b5aa6;
   border-radius: 2px;
   z-index: -1;
-  transition: opacity 0.15s;
+  transition: border-color 0.15s;
 }
-.btn:hover { background: #111; color: #fff; }
-.btn:hover::after { opacity: 0; }
-.btn.filled { background: #111; color: #fff; }
-.btn.filled::after { opacity: 0; }
-.btn.filled:hover { background: #333; }
+.btn:hover { background: #7b5aa6; color: #fff; border-color: #7b5aa6; }
+.btn:hover::after { border-color: #57068c; }
+.btn.filled { background: #7b5aa6; color: #fff; border-color: #7b5aa6; }
+.btn.filled::after { border-color: #57068c; }
+.btn.filled:hover { background: #57068c; border-color: #57068c; }
 
 .hero-scroll {
   position: absolute;
