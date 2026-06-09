@@ -1,3 +1,23 @@
+// Animate page title letters
+document.querySelectorAll('.section-title').forEach(el => {
+  const text = el.textContent;
+  el.textContent = '';
+  let delay = 0;
+  text.split('').forEach(char => {
+    const span = document.createElement('span');
+    if (char === ' ') {
+      span.innerHTML = '&nbsp;';
+      span.style.display = 'inline-block';
+    } else {
+      span.textContent = char;
+      span.style.animationDelay = delay + 's';
+      span.classList.add('title-letter');
+      delay += 0.08;
+    }
+    el.appendChild(span);
+  });
+});
+
 // Drawer
 const overlay = document.getElementById('drawer-overlay');
 document.getElementById('menu-open').addEventListener('click', () => overlay.classList.add('open'));
