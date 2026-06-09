@@ -250,6 +250,7 @@ body {
   border: 1px solid #ddd;
   padding: 1.25rem;
   position: relative;
+  overflow: hidden;
 }
 .host-card::after {
   content: '';
@@ -259,12 +260,12 @@ body {
   z-index: -1;
 }
 .host-photo {
-  width: 100%;
+  width: calc(100% + 2.5rem);
   aspect-ratio: 1/1;
   object-fit: cover;
   object-position: top;
   display: block;
-  margin-bottom: 1rem;
+  margin: -1.25rem -1.25rem 1rem -1.25rem;
 }
 .host-card h3 {
   font-family: 'DM Serif Display', Georgia, serif;
