@@ -1,3 +1,8 @@
+// Start DM Serif animations only after font is loaded to avoid swap jerk
+document.fonts.ready.then(() => {
+  document.documentElement.classList.add('fonts-loaded');
+});
+
 // Animate page title letters
 document.querySelectorAll('.section-title').forEach(el => {
   const text = el.textContent;
@@ -17,6 +22,24 @@ document.querySelectorAll('.section-title').forEach(el => {
     el.appendChild(span);
   });
 });
+
+// NUX word reveal on scroll
+const revealItems = [
+  document.getElementById('reveal-new'),
+  document.getElementById('reveal-user'),
+  document.getElementById('reveal-exp'),
+];
+if (revealItems[0]) {
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  revealItems.forEach(el => revealObserver.observe(el));
+}
 
 // Drawer
 const overlay = document.getElementById('drawer-overlay');
