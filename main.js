@@ -41,18 +41,18 @@ const scrollBtn = document.getElementById('scroll-down');
 if (scrollBtn) {
   scrollBtn.addEventListener('click', () => {
     const target = document.getElementById('about');
-    const start = window.scrollY;
-    const end = target.getBoundingClientRect().top + start;
-    const duration = 2400;
+    const scrollEl = document.scrollingElement || document.documentElement;
+    const start = scrollEl.scrollTop;
+    const end = start + target.getBoundingClientRect().top;
+    const duration = 3000;
     let startTime = null;
-    function easeInOutCubic(t) {
+    function ease(t) {
       return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
     }
-    function step(timestamp) {
-      if (!startTime) startTime = timestamp;
-      const elapsed = timestamp - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      window.scrollTo(0, start + (end - start) * easeInOutCubic(progress));
+    function step(ts) {
+      if (!startTime) startTime = ts;
+      const progress = Math.min((ts - startTime) / duration, 1);
+      scrollEl.scrollTop = start + (end - start) * ease(progress);
       if (progress < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
