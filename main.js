@@ -36,6 +36,14 @@ if (revealItems[0]) {
   revealItems.forEach(el => revealObserver.observe(el));
 }
 
+// Scroll arrow
+const scrollBtn = document.getElementById('scroll-down');
+if (scrollBtn) {
+  scrollBtn.addEventListener('click', () => {
+    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+  });
+}
+
 // Drawer
 const overlay = document.getElementById('drawer-overlay');
 document.getElementById('menu-open').addEventListener('click', () => overlay.classList.add('open'));
