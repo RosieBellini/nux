@@ -288,7 +288,7 @@ body {
 /* ── Readings C1 layout ── */
 .readings-list { margin-top: 2rem; display: flex; flex-direction: column; gap: 2.5rem; }
 
-.r-theme { border-left: 3px solid #7b5aa6; padding-left: 1.5rem; }
+.r-theme { border-left: 3px solid #7b5aa6; padding-left: 1.5rem; position: relative; }
 
 .r-header { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 0.85rem; }
 
@@ -303,9 +303,16 @@ body {
 
 .r-label { font-size: 0.65rem; color: #7b5aa6; letter-spacing: 0.12em; text-transform: uppercase; }
 .r-name { font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: 1.4rem; color: #111; }
-.r-dates-row { display: flex; align-items: center; justify-content: space-between; margin-top: 0.1rem; }
-.r-dates { font-size: 0.65rem; color: #6d6d6d; }
-.r-icon { width: 32px; height: auto; display: block; opacity: 0.85; }
+.r-dates { font-size: 0.65rem; color: #6d6d6d; margin-top: 0.1rem; }
+.r-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateY(50%);
+  width: 72px;
+  height: auto;
+  opacity: 0.9;
+}
 
 .r-body {
   display: grid;
