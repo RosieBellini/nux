@@ -285,6 +285,60 @@ body {
 .host-links a { font-size: 0.72rem; color: #7b5aa6; text-decoration: none; letter-spacing: 0.03em; }
 .host-links a:hover { text-decoration: underline; }
 
+/* ── Readings C1 layout ── */
+.readings-list { margin-top: 2rem; display: flex; flex-direction: column; gap: 2.5rem; }
+
+.r-theme { border-left: 3px solid #7b5aa6; padding-left: 1.5rem; }
+
+.r-header { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 0.85rem; }
+
+.r-num {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-style: italic;
+  font-size: 3rem;
+  color: #e8e0f0;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.r-label { font-size: 0.65rem; color: #7b5aa6; letter-spacing: 0.12em; text-transform: uppercase; }
+.r-name { font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: 1.4rem; color: #111; }
+.r-dates { font-size: 0.65rem; color: #6d6d6d; margin-top: 0.1rem; }
+
+.r-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  border-top: 1px solid #eee;
+  padding-top: 0.85rem;
+}
+
+.r-session-label {
+  font-size: 0.65rem;
+  color: #7b5aa6;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.r-paper { margin-bottom: 0.85rem; }
+.r-paper:last-child { margin-bottom: 0; }
+
+.r-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #111;
+  line-height: 1.35;
+  margin-bottom: 0.15rem;
+}
+
+.r-authors { font-size: 0.68rem; color: #6d6d6d; margin-bottom: 0.2rem; }
+
+.r-links { font-size: 0.68rem; }
+.r-links a { color: #7b5aa6; text-decoration: none; margin-right: 0.4rem; }
+.r-links a:hover { text-decoration: underline; }
+
 /* ── Readings table ── */
 table {
   width: 100%;
