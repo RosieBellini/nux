@@ -36,11 +36,26 @@ if (revealItems[0]) {
   revealItems.forEach(el => revealObserver.observe(el));
 }
 
-// Scroll arrow
+// Scroll arrow — slow scroll so the word reveal plays out
 const scrollBtn = document.getElementById('scroll-down');
 if (scrollBtn) {
   scrollBtn.addEventListener('click', () => {
-    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    const target = document.getElementById('about');
+    const start = window.scrollY;
+    const end = target.getBoundingClientRect().top + start;
+    const duration = 2400;
+    let startTime = null;
+    function easeInOutCubic(t) {
+      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      window.scrollTo(0, start + (end - start) * easeInOutCubic(progress));
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
   });
 }
 
