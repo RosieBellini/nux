@@ -303,7 +303,9 @@ body {
 
 .r-label { font-size: 0.65rem; color: #7b5aa6; letter-spacing: 0.12em; text-transform: uppercase; }
 .r-name { font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: 1.4rem; color: #111; }
-.r-dates { font-size: 0.65rem; color: #6d6d6d; margin-top: 0.1rem; }
+.r-dates-row { display: flex; align-items: center; justify-content: space-between; margin-top: 0.1rem; }
+.r-dates { font-size: 0.65rem; color: #6d6d6d; }
+.r-icon { width: 32px; height: auto; display: block; opacity: 0.85; }
 
 .r-body {
   display: grid;
