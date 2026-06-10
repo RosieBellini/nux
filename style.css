@@ -109,10 +109,6 @@ body {
 .hero-wordmark span {
   display: inline-block;
   animation: dropBounce 10s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
-  animation-play-state: paused;
-}
-.fonts-loaded .hero-wordmark span {
-  animation-play-state: running;
 }
 .hero-wordmark span:nth-child(1) { animation-delay: 0s; }
 .hero-wordmark span:nth-child(2) { animation-delay: 0.6s; }
@@ -249,10 +245,6 @@ body {
 .title-letter {
   display: inline-block;
   animation: dropBounce 10s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
-  animation-play-state: paused;
-}
-.fonts-loaded .title-letter {
-  animation-play-state: running;
 }
 
 /* ── Accordion ── */

@@ -1,8 +1,3 @@
-// Start DM Serif animations only after font is loaded to avoid swap jerk
-document.fonts.ready.then(() => {
-  document.documentElement.classList.add('fonts-loaded');
-});
-
 // Animate page title letters
 document.querySelectorAll('.section-title').forEach(el => {
   const text = el.textContent;
