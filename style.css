@@ -97,8 +97,7 @@ body {
 }
 
 .hero-wordmark {
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-style: italic;
+  font-family: 'Syne', sans-serif; font-weight: 800;
   font-size: clamp(5rem, 22vw, 16rem);
   color: #7b5aa6;
   display: inline-flex;
@@ -140,8 +139,7 @@ body {
   padding: 0.5rem 1.3rem;
   border-radius: 3px;
   border: 1.5px solid #7b5aa6;
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-style: italic;
+  font-family: 'Syne', sans-serif; font-weight: 800;
   font-size: 0.95rem;
   text-decoration: none;
   color: #7b5aa6;
@@ -224,8 +222,7 @@ body {
 }
 
 .nux-reveal-word {
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-style: italic;
+  font-family: 'Syne', sans-serif; font-weight: 800;
   font-size: clamp(2.5rem, 8vw, 5rem);
   color: #7b5aa6;
   line-height: 1;
@@ -245,10 +242,9 @@ body {
 }
 
 .section-title {
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-style: italic;
+  font-family: 'Syne', sans-serif; font-weight: 800;
   font-size: clamp(2rem, 6vw, 3rem);
-  font-weight: 400;
+  
   color: #7b5aa6;
   text-align: center;
   margin-bottom: 2rem;
@@ -331,10 +327,9 @@ body {
   margin: -1.25rem -1.25rem 1rem -1.25rem;
 }
 .host-card h3 {
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-style: italic;
+  font-family: 'Syne', sans-serif; font-weight: 800;
   font-size: 1.3rem;
-  font-weight: 400;
+  
   color: #7b5aa6;
   margin-bottom: 0.2rem;
 }
@@ -353,8 +348,7 @@ body {
 .r-header { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 0.85rem; }
 
 .r-num {
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-style: italic;
+  font-family: 'Syne', sans-serif; font-weight: 800;
   font-size: 3rem;
   color: #b8a0d4;
   line-height: 1;
@@ -362,7 +356,7 @@ body {
 }
 
 .r-label { font-size: 0.65rem; color: #7b5aa6; letter-spacing: 0.12em; text-transform: uppercase; }
-.r-name { font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: 1.4rem; color: #111; }
+.r-name { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: #111; }
 .r-dates { font-size: 0.65rem; color: #6d6d6d; margin-top: 0.1rem; }
 .r-icon {
   position: absolute;
@@ -394,8 +388,7 @@ body {
 .r-paper:last-child { margin-bottom: 0; }
 
 .r-title {
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-style: italic;
+  font-family: 'Syne', sans-serif; font-weight: 800;
   font-size: 0.9rem;
   color: #111;
   line-height: 1.35;
