@@ -243,7 +243,8 @@ body {
 }
 
 .section-title {
-  font-family: 'Titan One', sans-serif;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
   font-size: clamp(2rem, 6vw, 3rem);
   
   color: #7b5aa6;
@@ -328,9 +329,9 @@ body {
   margin: -1.25rem -1.25rem 1rem -1.25rem;
 }
 .host-card h3 {
-  font-family: 'Titan One', sans-serif;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
   font-size: 1.3rem;
-  
   color: #7b5aa6;
   margin-bottom: 0.2rem;
 }
@@ -357,7 +358,7 @@ body {
 }
 
 .r-label { font-size: 0.65rem; color: #7b5aa6; letter-spacing: 0.12em; text-transform: uppercase; }
-.r-name { font-family: 'Titan One', sans-serif; font-size: 1.4rem; color: #111; }
+.r-name { font-family: 'Libre Baskerville', serif; font-weight: 700; font-size: 1.4rem; color: #111; }
 .r-dates { font-size: 0.65rem; color: #6d6d6d; margin-top: 0.1rem; }
 .r-icon {
   position: absolute;
@@ -388,7 +389,8 @@ body {
 .r-paper:last-child { margin-bottom: 0; }
 
 .r-title {
-  font-family: 'Titan One', sans-serif;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
   font-size: 0.9rem;
   color: #111;
   line-height: 1.35;
